@@ -791,6 +791,7 @@ void
 on_repaint(struct _graph_setting * pg, HWND hwnd, HDC dc) {
 	int page = pg->visual_page;
 	bool release = false;
+	if (!pg->img_page[page]) return;
 	pg->img_timer_update->copyimage(pg->img_page[page]);
 	if (dc == NULL) {
 		dc = GetDC(hwnd);

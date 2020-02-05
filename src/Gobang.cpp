@@ -12,14 +12,14 @@ namespace Gobang
 	void load_font_res()
 	{
 		int i;
-		for (i = 0; i < sizeof(font_res); i++)
+		for (i = 0; i < sizeof(font_res) / sizeof(const char*); i++)
 			AddFontResource(font_res[i]);
 	}
 
 	void remove_font_res()
 	{
 		int i;
-		for (i = 0; i < sizeof(font_res); i++)
+		for (i = 0; i < sizeof(font_res) / sizeof(const char*); i++)
 			RemoveFontResource(font_res[i]);
 	}
 
